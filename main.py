@@ -158,7 +158,7 @@ if __name__ == '__main__':
 	_thread.start_new_thread(manageTokens, ())
 	accountsList = []
 	n_logging("Adidas Account Creator v1.0.0")
-	n_logging("@TheRealChefUK")
+	n_logging("GermanConnec")
 	n_logging("***************************************************************************")
 	creator = Generator(config['locale'], '6LdyFRkUAAAAAF2YmQ9baZ6ytpVnbVSAymVpTXKi', 'https://www.adidas.com')
 	num = input("# ACCOUNTS: ")
