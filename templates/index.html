@@ -1,0 +1,45 @@
+<html>
+
+  <head>
+
+    <title>GermanConnec</title>
+    <style type="text/css">
+      body {
+        margin: 5em 10em 0 10em;
+        font-family: sans-serif;
+        background-color: #2B292E
+      }
+      p {
+        font-family: sans-serif;
+        color: #F3F0F0
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <p>Adidas Account Generator | GermanConnec </p>
+
+    <form action="/submit" method="post">
+        <div class="g-recaptcha" data-sitekey="{{ sitekey }}" data-callback="sub"></div>
+        <script type="text/javascript" src="https://www.google.com/recaptcha/api.js"></script>
+        <p><input type="submit" value="Submit Captcha" id="submit" /></p>
+    </form>
+
+    <p> 1 solved captcha = 1 Account created</p>
+    <p> Created by https://github.com/ryan9918 | modified for GermanConnec</p>
+    <p> https://www.facebook.com/GermanConnec/</p>
+      
+    <script>
+      function sub(){
+        document.getElementById("submit").click();
+      }
+    </script>
+
+    <script src=static/scripts/jquery-3.2.1.min.js></script>
+    <script src=static/scripts/captcha.js></script>
+
+  </body>
+
+</html>
