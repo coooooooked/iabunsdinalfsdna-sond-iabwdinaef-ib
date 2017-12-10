@@ -44,7 +44,7 @@ log.setLevel(logging.ERROR)
 
 @app.route('/', methods=['GET'])
 def base():
-	return redirect("http://fuckrsvpkingz.adidas.co.uk:5000/solve", code=302)
+	return redirect("http://germanconnec.de:8000/solve", code=302)
 
 @app.route('/solve', methods=['GET'])
 def solve():
@@ -56,7 +56,7 @@ def solve():
 def submit():
 	token = request.form.get('g-recaptcha-response', '')
 	captureToken(token)
-	return redirect("http://fuckrsvpkingz.adidas.co.uk:5000/solve", code=302)
+	return redirect("http://germanconnec.de:8000/solve", code=302)
 
 
 class Generator():
@@ -118,11 +118,11 @@ class Generator():
 			'Referer': 'https://cp.adidas{}/web/eCom/{}/loadcreateaccount'.format(self.domain, self.language)
 			})
 		data = {
-			'firstName': 'John',
-			'lastName': 'Smith',
+			'firstName': 'German',
+			'lastName': 'Connec',
 			'minAgeCheck': 'true',
-			'day': '23',
-			'month': '05',
+			'day': '12',
+			'month': '09',
 			'year': '1998',
 			'_minAgeCheck': 'on',
 			'email': email,
@@ -162,7 +162,7 @@ if __name__ == '__main__':
 	n_logging("***************************************************************************")
 	creator = Generator(config['locale'], '6LdyFRkUAAAAAF2YmQ9baZ6ytpVnbVSAymVpTXKi', 'https://www.adidas.com')
 	num = input("# ACCOUNTS: ")
-	webbrowser.open('http://fuckrsvpkingz.adidas.co.uk:5000/solve')
+	webbrowser.open('http://germanconnec.de:8000/solve')
 	n_logging("Started account generator.")
 	for x in range(int(num)):
 		email = '{}-{}@{}'.format(config['prefix'], randint(1111,999999999), config['domain'])
