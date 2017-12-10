@@ -44,7 +44,7 @@ log.setLevel(logging.ERROR)
 
 @app.route('/', methods=['GET'])
 def base():
-	return redirect("http://germanconnec.adidas.de:5000/solve", code=302)
+	return redirect("http://w.germanconnec.adidas.de:5000/solve", code=302)
 
 @app.route('/solve', methods=['GET'])
 def solve():
@@ -56,7 +56,7 @@ def solve():
 def submit():
 	token = request.form.get('g-recaptcha-response', '')
 	captureToken(token)
-	return redirect("http://germanconnec.adidas.de:5000/solve", code=302)
+	return redirect("http://w.germanconnec.adidas.de:5000/solve", code=302)
 
 
 class Generator():
@@ -162,7 +162,7 @@ if __name__ == '__main__':
 	n_logging("***************************************************************************")
 	creator = Generator(config['locale'], '6LdyFRkUAAAAAF2YmQ9baZ6ytpVnbVSAymVpTXKi', 'https://www.adidas.com')
 	num = input("# ACCOUNTS: ")
-	webbrowser.open('http://germanconnec.adidas.de:5000/solve')
+	webbrowser.open('http://w.germanconnec.adidas.de:5000/solve')
 	n_logging("Started account generator.")
 	for x in range(int(num)):
 		email = '{}-{}@{}'.format(config['prefix'], randint(1111,999999999), config['domain'])
